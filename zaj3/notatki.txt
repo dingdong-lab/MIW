@@ -1,0 +1,11 @@
+# Przetwarzanie danych statystycznych po wczytaniu na zdatne do obrabiania - funkcja loadData
+Wczytuje kolejne wiersze z pliku i przetwarza je następująco:
+usuń znak końca linii \n
+podziel elementy na listę według seperatora spacja ' '
+używając funkcji map skonwertuj kolejne elementy na liczby zmiennoprzecinkowe
+włóż tak przetworzne dane jako wiersz do tablicy dwuwymiarowej
+
+# Metryka euklidesowa - euclideanDist
+sprawdź czy dwa wektory są sobie równe
+oblicz odległości między wektorami z równania pitagorasa: sqrt((v1_x - v2_x)^2 + ...)
+wektorowo operacja tą można określić jako długość wektora powstałego z różnicy tych wektorów.

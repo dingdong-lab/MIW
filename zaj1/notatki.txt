@@ -1,0 +1,53 @@
+Metoda format dla string:
+  Niejawne oznaczanie zmiennych do postawienia
+  print('We are the {} who say "{}!"'.format('knights', 'Ni')) - wyświetlane po kolei
+
+  Jawne oznaczenie zmiennych do podstawienia po indeksach
+  print('{0} and {1}'.format('spam', 'eggs')) - wyświetlane po indeksach, gdzie indeksy idą po kolei
+
+  Jawne oznaczanie zmiennych do podstawienia po etykietach
+  print('This {food} is {adjective}.'.format(food='spam', adjective='absolutely horrible'))
+
+  Powyższe metody jawne można mieszać
+  print('The story of {0}, {1}, and {other}.'.format('Bill', 'Manfred', other='Georg'))
+
+  Jawne oznaczanie zmiennych poprzez słownik:
+  table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}
+  print('Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; ' 'Dcab: {0[Dcab]:d}'.format(table))
+
+  Inny sposób na oznaczanie zmiennych poprzez słownik:
+  table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}
+  print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))
+
+  Generowanie minimalnych odstępów
+  print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))
+
+Pobieranie typu zmiennej:
+  funkcja type(nazwa_zmiennej) zwraca typ w postaci stringa
+
+Slicing w python:
+  tablica[start:stop:skok] drukuje tablice elementów ze zbioru [start;stop) ze skokiem indeksu o skok
+  tablica[:stop:skok] - skacze od początku do stop
+  tablica[start::skok] - skacze od start do końca
+  tablica[start:stop] - skacze od startu do końca co 1
+  tablica[start:stop:-skok] - skacze od stop do start
+  tablica[-start:] - wypisuje start końcowych elementów
+  Zakres slicingu wynosi [-start;start]
+
+Lista metody:
+  lista1.extend(lista2) - dodaje elementy lista2 na koniec lista1
+  lista1.append(element) - dodaje element do lista1 na koniec - tożsame z operatorem +
+  lista1.index(element) - zwraca indeks elementu w lista1, wyrzuca wyjątek gdy nie ma go w liscie
+
+String metody:
+  lancuch1.join(obiekt) - tworzy lancuch z obiektu gdzie lancuch1 to separator miedzy elementami obiektu
+  lancuch1.split(separator) - tworzy z lancuch1 liste elementow, ktore sa wyznaczane poprzez napotkanie separatora w argumencie
+  lancuch1.replace(co, naco) - zastepuje wszelkie podlancuchy co w lancuch1 na na podlancuch naco
+
+Inne metody:
+  len(obiekt) - zwraca ilosc elementow obiektu
+  set(obiekt) - konwertuje obiekt na zbior nieuporzadkowany jego elementow
+  tuple(obiekt) - konwertuj obiekt na parę uporzadkowaną jego elementów
+
+słownik:
+  słownik = {klucz1:wartość1, klucz2:wartość2, ..., kluczn:wartośćn} - definiowanie słownika

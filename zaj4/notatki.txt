@@ -1,0 +1,21 @@
+#Podział ze względu na klasę decyzyjną - klasaDec
+Podaj pewien wektor odniesienia - wzorzec
+Wydziel z ostatniej kolumny tzw. klasę decyzyjną
+Wylicz odległość przestrzenną między resztą wiersza a wzorcem
+Utwórz listę par (klasa decyzyjna wiersza, odległość reszty wiersza)
+
+#Grupowanie według klasy decyzyjnej - grupowanie
+Dla uzyskanych wcześniej listy par utwórz słownik z kluczami stanowiącymi klasy decyzyjne
+Wartościami kluczy ma być tablica dwuwymiarowa
+Wstaw według klasy decyzyjnej jako klucz odległość zawartą w krotce
+Zostanie utworzony finalnie słownik z klasą decyzyjną i odległościami dla nich
+
+#Sumowanie k-elementów - sumowanie
+Dla uzyskanego wcześniej słownika klas utwórz nowy słownik z takimi samymi kluczami
+Posortuj dla każdego klucza wartości w poprzednim słowniku
+Dla danego klucza nowego słownika zsumuj k-najmniejszych odległościami
+Zostanie utworzony finalnie słownik z klasą decyzyjną i sumą k-najmniejszych odległościami
+
+#Klasa najmniejsza - najmniejsza
+Z utworzonego wcześniej słownika sprawdź czy istnieje element najmniejszych
+Jeżeli element najmniejszy istnieje to zwróć klucz tego elementu, czy klasę decyzyjną

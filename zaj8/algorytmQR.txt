@@ -1,0 +1,12 @@
+# Implementacja rozkładu macierzy na iloczyn QR
+1.Skopiuj macierz A do macierzy Q
+2.Idąc po kolejnych kolumnach od lewej dokonaj ortogonalizacji Grama-Schmidta
+3.proj_u(v) = u*<v,u>/<u,u>
+loop:
+    Wylicz u_i ze wzoru u_i = v_i - sum(proj_u_j(v_i))_i-1
+    Zachowaj kwadrat długości u_i ze wzoru u_i*u_i
+    powtórz dla i+1
+4.Po zakończeniu ortogonalizacji znormalizuj wektory na podstawie zachowanych kwadratów długości
+5.Skopiuj macierz Q do macierzy Q_T i dokonaj transpozycji
+6.Wylicz macierz R ze wzoru R = Q_T*a
+7.Sprawdź ewentualnie wynik A = R*Q

@@ -1,0 +1,26 @@
+Konwersja zmiennych i obiektów na bool:
+  Dla pustych kolekcji lub pojedynczych elementów, które można rzucić na 0 lub Null zwracany jest False
+  Dla niepustych kolekcji i pojedynczych elementów, różnych od Null lub 0 zwracany jest True
+
+Operator in:
+  Podstawowym działaniem jest zwrócenie prawdy jeżeli dla x in y, gdzie x jest elementem a y zbiorem, x istnieje w y
+  Działaniem dodatkowym w pętlach jest przyjmowanie kolejnych elementów z podanego kontenera aż do wyczerpania
+
+Funkcja ord:
+  Zwraca dla pojedynczego znaku jest kod numeryczny
+
+Operacja na plikach:
+  open(filename, streammode) - zwraca uchwyt do pliku o nazwie filename w trybie pracy streammode
+  dostępny tryby pracy to:
+    r - read
+    w - write od końca
+    a - write od początku
+    x - write z tworzeniem pliku, error jeżeli istnieje
+    r+ i w+ - pozwala zarówno na write jak i read
+  do trybu pracy można dołączyć również traktowanie strumienia dołączając po trybie pracy:
+    t - strumień tekstowy
+    b - strumień bajtów
+  handle.close() - zamykanie uchwytu
+  with open(filename, streammode) as handle: - tworzy blok, w którym plik pozostaje otwarty
+  for x in handle: - tworzy blok, w którym x przemieszcza się po kolejnych liniach pliku
+

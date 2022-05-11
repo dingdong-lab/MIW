@@ -1,0 +1,23 @@
+# Rozkład macierzy A na iloczyn QR
+Mamy do zbudowania równanie A = QR, wyznaczając Q i R. Q budujemy następująco:
+    Zakładamy, że macierz A jest nieosobliwa i traktujemy jej kolumny jako wektory;
+    Idąc po kolejnych kolumnach w dowolnym przebiegu, lecz najlepiej po kolei od lewej,
+    dokonujemy ortogonalizacji Grama-Schmidta;
+    Po zakończeniu ortogonalizacji Grama-Schmidta dokonujemy normalizacji wektorów, czyli
+    kolumn i wynikiem końcowym jest macierz .
+Następnie przechodzimy do określenia macierzy R posługując się następującymi własnościami:
+    Macierz Q jest macierzą ortonormalną, tzn. Q^T = Q^-1, korzystając z tej własności wyznaczmy
+    macierz R przekształcając równanie A = QR, wiedząc, że Q*Q^T = I:
+        1.A = QR
+        2.Q^T*A = Q^T*Q*R
+        3.Q^T*A = (Q^T*Q)^TT*R
+        4.Q^T*A = (Q*Q^T)^T*R
+        5.Q^T*A = I^T*R
+        6.R = Q^T*A
+Posiadając teraz dwie składowe iloczynu należy teraz wiedzieć, że macierz R jest macierzą trójkątną
+ponieważ i-ty wiersz (i-ta kolumna bez transpozycji) macierzy Q^T jest prostopadła, do < i-tych kolumn
+macierzy A. Oraz z faktu ortonormalności macierzy Q, że jej wyznacznik wynosi 1. Zatem wyznacznik macierzy
+A jest równy iloczynowi wyznaczników macierzy Q i macierzy R, rozwijając:
+    1.det(A) = det(Q)*det(R); ale det(Q) = 1
+    2.det(A) = det(R); ale det(R) = R_11 * R_22 * ... * R_nn
+    3.det(A) = Iloczyn(R_ii)

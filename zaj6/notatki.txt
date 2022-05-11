@@ -1,0 +1,17 @@
+# Średnia statystyczna wektorow - mean, mean_matrix
+Dla wektora oblicz iloczyn skalarny tego wektora z wektorem jednostkowym i podziel przez ilość elementów
+Dla macierzy przemnóż transponowany wektor jednostkowy z macierzą i podziel ją przez liczbę wierszy
+
+
+# Wariancja statystyczna wektorów - variance, variance_matrix
+Oblicz wektor wyśrodkowany, czyli odejmij od wektora danych wektor jednostkowy pomnożony przez średnią
+Złóż skalarnie wektor wyśrodkowany ze sobą i podziel przez liczbę elementów
+
+Oblicz macierz wyśrodkowaną, czyli odejmij od macierzy danych iloczyn wektora jednostkowego z transponowanym wektorem
+srednich. 
+Następnie utwórz wektor wariancji składający się z wyników iloczynu skalarnego kolumny macierzy z samym sobą podzielonym przez
+liczbę elementów (długość kolumny)
+
+# Odchylenie standardowe wektorów - deviation, deviation_matrix
+Dla wektora wynikową wariancje spierwiastkuj kwadratowo
+Dla macierzy, dla każdego elementu wektora wariancji zastąp go jego pierwiastkiem kwadratowym

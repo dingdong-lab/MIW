@@ -1,0 +1,22 @@
+# Wartosci własne przy pomocy rozkładu QR
+Na podstawie twierdzenia Schura zwanym również rozkładem Schura, które mówi, że
+każdej macierzy A można przedstawić macierz podobną U, jeżeli istnieje 
+macierz niesingularna i unitarna Q oraz spełnione jest równanie A = Q^-1*U*Q. 
+Macierz podobna U jest trójkątna, a jej elementy na przekątnej są wartościami
+własnymi macierzy A.
+
+Teraz zastosowanie rozkładu QR polega na pewnych zależnościach z twierdzeniem.
+Otóz A = QR można przedstawic w postai A_k = Q_k*R_k, gdzie k jest numerem
+iteracji, co oznacza, że (Q_k)^-1*A_k = R_K i dalej (Q_K)^-1*A_k*Q_K = R_K*Q_K
+oraz (Q_K)^-1*A_k*Q_K = A_k+1 = R_K*Q_K, macierze A_k+1 i A_k sa podobne
+czyli maja te same wektory wlasne. Dla k->infinity macierz A_k stanie się
+macierza U w dekompozycji Schura, tzn. kolejne iteracje przyblizaja nas do
+postaci U.
+
+Zadaniem algorytmu jest iteracja wielokrotna skladajaca sie z operacji
+do n times:
+    Q, R = qr_decomposition(A) # A = A_k
+    A = R*Q # A = A_k+1
+Im więcej iteracji tym A jest bliższa U
+
+https://www.andreinc.net/2021/01/25/computing-eigenvalues-and-eigenvectors-using-qr-decomposition

@@ -1,0 +1,30 @@
+# Liczenie iloczynu skalarnego dla ciągłego zbioru wartości na przedziale metoda monte-carlo - monte_carlo
+Dla wskazanej funkcji i przedziału wylicza całkę we wskazany sposób:
+Wybierz funkcję i przedział dziedziny
+Ogranicz przedział wartości jakąś górną granicą i dolną jeżeli funkcja ma dolną granicę > 0.
+Dla takich przedziału wartości i dziedziny wylosuj n punktów
+Zlicz ile punktów znajduje się nad funkcją a ile pod
+Całką będzie wartośc wyznaczona przez pole prostokątu wyznaczonego przez przedziały * punkty pod funkcją * n
+
+# Liczenie iloczynu skalarnego dla ciągłego zbioru wartości na przedziale metodą prostokątów - riemann
+Dla wskazanego przedziału dziedziny a i b, i precyzji n wyznacz krok = (b-a)/(n-1)
+Teraz przesuwaj się po osi x o krok i dla wskazanego obecnie punktu wylicz pole prostokąta o podstawie krok i 
+wysokości f(x)
+Suma pól tych prostokątów da nam całkę
+
+# Liczenie iloczynu skalarnego dla ciągłego zbioru wartości na przedziale metodą trapezów - trapmann
+Dla wskazanego przedziału dziedziny a i b, i precyzji n wyznacz krok = (b-a)/(n-1)
+Teraz przesuwaj się po osi x o krok i dla wskazanego obecnie punktu wylicz pole trapezu o wysokości diff i podstawach
+f(x) i f(x-krok)
+Suma pól tych trapezów da nam całkę
+
+# Dzielenie zbioru wartości na klasy n-wartości
+Poprzydzielaj dla wskazanego zbioru losowo jedną z n-wartości
+Znormalizuj wartości, tzn. zmapuj je na 0...1 według wartości min i maks dla kolumny
+loop:
+Pogrupuj wartości według klasy
+Dla każdej klasy wyznacz punkt barycentryczny, tzn. taki wiersz danych, którego suma odległości do pozostałych jest najmniejsza,
+posługuj się tylko wierszami z tą samą klasą
+Porównaj teraz odległość każdego wiersza z każdym punktem barycentrycznym i sprawdź do którego ma bliżej
+Jeżeli ma bliżej do punktu o klasie innej niż sam posiada, to zmień jego klasę i oznacz algorytm do powtórzenia
+Jeżeli algorytm jest oznaczony do powtórzenia to skocz do loop

@@ -1,0 +1,10 @@
+# Lewostronna odwrotność macierzy - regresja liniowa
+Dla wskazanego zbioru danych składających się z n punktów obliczenie regresji liniowej sprowadza się do wyliczenia
+lewostronnej odwrotności macierzy, której pierwszą kolumną jest wektor jednostkowy a drugą kolumną wspołrzędne x
+punktów.
+Wyznaczamy równanie liniowej, które pokryje nam najbliżej wszystkie punkty typu X*B = Y, gdzie Y to wektor transponowany
+współrzędnych Y punktów. Wyznaczamy wartość B przekształcając wzór:
+X*B = Y
+X^T*X*B = X^T*Y, gdzie X^T*X da nam macierz kwadratową, z wyznacznikiem niezerowym
+I*B = (X^T*X)^-1*X^T*Y, gdzie (X^T*X)^-1*X^T to lewostronna odwrotność macierzy X
+Znając B jestesmy w staniew wyznaczyć wskazane równanie liniowe

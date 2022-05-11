@@ -1,0 +1,2 @@
+# wektory wlasne otrzymujemy rozwiazujac rownanie A*v = lambda*v
+# dalej (A-I*delta)*v = 0
