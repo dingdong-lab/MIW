@@ -1,5 +1,6 @@
 import numpy as np
 from numpy.linalg import inv
+import math
 
 def multiply(a,b):
     m1, n1 = a.shape
@@ -48,52 +49,6 @@ def triang_det(a):
         determinant = determinant*a[i,i]
 
     return -determinant
-
-'''
-def gauss_jordan(a):
-    m, n = a.shape
-    a = np.array([[float(a[i,j]) if j < n else 0 for j in range(n*2)] for i in range(m)])
-    for i in range(m):
-        a[i, m+i] = 1
-    n = n*2
-
-    for i in range(m-1):
-        a_ii = a[i, i]
-        depth = 1
-        while a[i+depth, i] == 0 and depth < m:
-            depth += 1
-        if depth < m:
-            a_ij = a[i+depth, i]
-            for j in range(i, n):
-                a[i, j] = a[i, j] - a[i+depth, j]*(a_ii-1)/a_ij
-        else:
-            continue
-        
-        a_ii = a[i, i]
-        for j in range(i+1, m):
-            if a[j,i] == 0:
-                continue
-            a_ji = a[j,i]
-            for k in range(i, n):
-                a[j,k] = a[j,k] - a[i,k]*a_ji/a_ii
-
-    a_ii = a[m-1, m-1]
-    for i in range(n):
-        a[m-1, i] = a[m-1,i]/a_ii
-
-    for i in range(1,m):
-        a_ii = a[i, i]
-        for j in range(i-1, -1, -1):
-            if a[j,i] == 0:
-                continue
-            a_ji = a[j, i]
-            for k in range(i, n):
-                a[j,k] = a[j,k] - a[i,k]*a_ji/a_ii
-
-    a = np.array([[a[i,j] for j in range(n//2, n)] for i in range(m)])
-
-    return a
-'''
 
 def gauss_jordan(a):
     m, n = a.shape

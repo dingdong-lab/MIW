@@ -1,0 +1,10 @@
+# Rozkład SVD jest algorytmem składającym się z kilku etapów
+# 1. Wyliczamy dwie macierze A^T*A reprezentującą wartości własne dla macierzy ortonormalnej V^T
+# i macierz AA^T reprezetującą wartości własne dla macierzy ortonormalnej U
+# 2. Wyliczamy dla macierzy ich wertości własne i wektory własne, ponieważ z twierdzenia spektralnego
+# mamy pewność, że macierze symetryczne mają wektory własne wzajemnie prostopadłe, to z uzyskanych
+# wektorów konstruujemy bazę w postaci macierzy ortonormalnych V^T i U.
+# 3. Z uzyskanych wartości własnych tworzymy macierz wartości singularnych E, poprzez ułożenie pierwiastków
+# wartości własnych po przekątnej w kolejności niemalejącej
+# 4. Otrzymane macierze pozwalają nam odzyskać źródłową macierz A poprzez równanie A = UEV^T, Otrzymane
+# macierze mają kolejny rozmiary A_mxn = U_mxm U_mxn V^T_nxn

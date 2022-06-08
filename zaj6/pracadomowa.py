@@ -16,7 +16,7 @@ def mean_matrix(a):
     av = np.array(a)
     v1 = [1 for x in range(m)]
 
-    return [np.dot(v1,av[:,x])/m for x in range(n)]
+    return [np.dot(v1, av[:,x])/m for x in range(n)]
     
 def mean(a):
     n = len(a)
@@ -43,7 +43,7 @@ def variance_matrix(a_center):
     n = len(a_center[0])
     a_centerv = np.array(a_center)
 
-    return [np.dot(a_centerv[:,x],a_centerv[:,x])/m for x in range(n)]
+    return [np.dot(a_centerv[:,x], a_centerv[:,x])/m for x in range(n)]
 
 def variance(a_center):
     n = len(a_center)

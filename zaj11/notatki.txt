@@ -1,0 +1,5 @@
+# Dla wektora X w różnych baza A i B mamy równość AX = BX
+# Zatem przejście z bazy A->B mamy poprzez X = B^-1AX -> P_A->B = B^-1A
+# Jeżeli baza B jest ortonormalna to mamy P_A->B = B^TA
+# Jeżeli baza A jest kanoniczna to mamy P_A->B = B^T
+# Zatem X w bazie B będzie mieć współrzędne B^TX
